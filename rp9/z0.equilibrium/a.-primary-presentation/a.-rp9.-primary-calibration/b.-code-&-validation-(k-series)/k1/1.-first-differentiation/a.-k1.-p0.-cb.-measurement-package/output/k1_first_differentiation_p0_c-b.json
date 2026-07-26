@@ -1,0 +1,63 @@
+{
+  "id": "K1_FIRST_DIFFERENTIATION_P0_C-b",
+  "name": "First Differentiation — Isolated Self-Relational Section",
+  "version": "1.0.0",
+  "generated_at_utc": "2026-07-22T16:21:50Z",
+  "units": "dimensionless",
+  "methodological_position": {
+    "stage": "before explicit two-sphere Vesica Piscis presentation",
+    "classification": "isolated self-relational form measurement",
+    "relation": "D = R"
+  },
+  "input": {
+    "R_exact": "1/1",
+    "D_exact": "1/1",
+    "R_float": 1.0,
+    "D_float": 1.0
+  },
+  "derived_geometry": {
+    "ri_formula": "sqrt(R^2 - (D/2)^2)",
+    "ri_symbolic": "sqrt(3)/2 * R",
+    "ri_squared_exact": "3/4",
+    "ri_float": 0.8660254037844386,
+    "delta_r": 0.1339745962155614
+  },
+  "linear_relation": {
+    "ri_over_R": 0.8660254037844386,
+    "ri_over_R_percent": 86.60254037844386,
+    "delta_r_over_R": 0.1339745962155614,
+    "delta_r_over_R_percent": 13.397459621556141
+  },
+  "area_relation": {
+    "ri_squared_over_R_squared_exact": "3/4",
+    "AI_over_AY_exact": "3/4",
+    "inner_percent": 75.0,
+    "differential_exact": "1/4",
+    "differential_percent": 25.0
+  },
+  "numerical_representation": {
+    "exact_ratio": 0.75,
+    "exact_lock": 0.25,
+    "geometric_float_ratio": 0.7499999999999999,
+    "geometric_float_lock": 0.2500000000000001,
+    "ratio_residual": -1.1102230246251565e-16,
+    "lock_residual": 1.1102230246251565e-16,
+    "ratio_hex": "0x1.7ffffffffffffp-1",
+    "lock_hex": "0x1.0000000000002p-2"
+  },
+  "verification": {
+    "tests": {
+      "R_positive": true,
+      "D_positive": true,
+      "self_relation_D_equals_R": true,
+      "ri_squared_exact_3_over_4": true,
+      "ri_smaller_than_R": true,
+      "area_ratio_exact_3_over_4": true,
+      "lock_exact_1_over_4": true,
+      "linear_percent_sum_100": true,
+      "area_percent_sum_100": true,
+      "float_residuals_symmetric": true
+    },
+    "total_status": "PASS"
+  }
+}
