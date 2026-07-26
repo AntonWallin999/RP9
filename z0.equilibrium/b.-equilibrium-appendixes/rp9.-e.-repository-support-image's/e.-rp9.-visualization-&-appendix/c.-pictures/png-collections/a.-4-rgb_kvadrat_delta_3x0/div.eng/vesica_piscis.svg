@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1350" viewBox="0 0 1800 1350">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .circle-left { fill: #ff000010; stroke: #d00000; stroke-width: 5; }
+      .circle-right { fill: #0044ff10; stroke: #0044ff; stroke-width: 5; }
+      .vesica { fill: #00aa0026; stroke: #00aa00; stroke-width: 4; }
+      .main-line { stroke: #111111; stroke-width: 4; fill: none; }
+      .thin-line { stroke: #333333; stroke-width: 2; fill: none; }
+      .dash-line { stroke: #333333; stroke-width: 2; stroke-dasharray: 12 10; fill: none; }
+      .sync-line { stroke: #111111; stroke-width: 2; stroke-dasharray: 10 10; fill: none; opacity: 0.75; }
+      .row-line { stroke: #111111; stroke-width: 4; fill: none; }
+      .point { fill: #111111; }
+      .point-red { fill: #d00000; }
+      .point-blue { fill: #0044ff; }
+      .point-green { fill: #008800; }
+      .title { font-family: Arial, sans-serif; font-size: 44px; font-weight: 800; fill: #111111; letter-spacing: 1px; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 25px; font-weight: 700; fill: #333333; }
+      .label { font-family: Arial, sans-serif; font-size: 25px; font-weight: 700; fill: #111111; }
+      .row-label { font-family: Arial, sans-serif; font-size: 28px; font-weight: 800; fill: #111111; }
+      .small { font-family: Arial, sans-serif; font-size: 20px; font-weight: 600; fill: #222222; }
+      .tiny { font-family: Arial, sans-serif; font-size: 17px; font-weight: 600; fill: #333333; }
+      .red { fill: #d00000; }
+      .green { fill: #008800; }
+      .blue { fill: #0044ff; }
+      .magenta { fill: #d000a8; }
+      .box { fill: #f7f7f7; stroke: #111111; stroke-width: 2; rx: 18; }
+      .formula-box { fill: #ffffff; stroke: #111111; stroke-width: 3; rx: 18; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="1350"/>
+
+  <g id="TITLE">
+    <text x="900" y="85" text-anchor="middle" class="title">VESICA PISCIS - META-EQUILIBRIUM</text>
+    <text x="900" y="125" text-anchor="middle" class="subtitle">Potential 2 -&gt; Relation 1.5 -&gt; Equilibrium 1 -&gt; Residual 0.5</text>
+  </g>
+
+  <g id="SEQUENCE_PANEL">
+    <rect x="80" y="225" width="300" height="570" class="box"/>
+    <text x="230" y="275" text-anchor="middle" class="label">Sequence</text>
+    <text x="230" y="335" text-anchor="middle" class="small">1. Potential</text>
+    <text x="230" y="370" text-anchor="middle" class="small">2</text>
+    <text x="230" y="420" text-anchor="middle" class="small">v</text>
+    <text x="230" y="465" text-anchor="middle" class="small">2. Relation</text>
+    <text x="230" y="500" text-anchor="middle" class="small">1.5 / 2</text>
+    <text x="230" y="550" text-anchor="middle" class="small">v</text>
+    <text x="230" y="595" text-anchor="middle" class="small">3. Equilibrium</text>
+    <text x="230" y="630" text-anchor="middle" class="small">1</text>
+    <text x="230" y="680" text-anchor="middle" class="small">v</text>
+    <text x="230" y="725" text-anchor="middle" class="small">4. Residual</text>
+    <text x="230" y="760" text-anchor="middle" class="small">0.5</text>
+  </g>
+
+  <g id="FORMULA_PANEL">
+    <rect x="1420" y="225" width="300" height="570" class="box"/>
+    <text x="1570" y="275" text-anchor="middle" class="label">Structural Lock</text>
+    <rect x="1460" y="315" width="220" height="88" class="formula-box"/>
+    <text x="1570" y="350" text-anchor="middle" class="small">2 - 1.5</text>
+    <text x="1570" y="382" text-anchor="middle" class="small">= 0.5</text>
+    <rect x="1460" y="435" width="220" height="88" class="formula-box"/>
+    <text x="1570" y="470" text-anchor="middle" class="small">2</text>
+    <text x="1570" y="502" text-anchor="middle" class="small">= 1 + 1</text>
+    <rect x="1460" y="555" width="220" height="88" class="formula-box"/>
+    <text x="1570" y="590" text-anchor="middle" class="small">1.5</text>
+    <text x="1570" y="622" text-anchor="middle" class="small">= relation</text>
+    <rect x="1460" y="675" width="220" height="88" class="formula-box"/>
+    <text x="1570" y="710" text-anchor="middle" class="small">0.5</text>
+    <text x="1570" y="742" text-anchor="middle" class="small">= residual</text>
+  </g>
+
+  <g id="VESICA_GEOMETRY_STANDARD">
+    <!-- Standard Vesica Piscis: center distance equals radius. Each circumference hits the opposite center. -->
+    <circle id="LEFT_POTENTIAL_CIRCLE" cx="735" cy="510" r="330" class="circle-left"/>
+    <circle id="RIGHT_POTENTIAL_CIRCLE" cx="1065" cy="510" r="330" class="circle-right"/>
+    <path id="VESICA_LENS" class="vesica" d="M 900.000 224.212 A 330 330 0 0 1 900.000 795.788 A 330 330 0 0 1 900.000 224.212 Z"/>
+
+    <line x1="405" y1="510" x2="1395" y2="510" class="main-line"/>
+    <line x1="900.000" y1="224.212" x2="900.000" y2="795.788" class="dash-line"/>
+
+    <circle cx="735" cy="510" r="10" class="point-red"/>
+    <circle cx="1065" cy="510" r="10" class="point-blue"/>
+    <circle cx="900.000" cy="510" r="11" class="point-green"/>
+    <circle cx="900.000" cy="224.212" r="7" class="point"/>
+    <circle cx="900.000" cy="795.788" r="7" class="point"/>
+
+    <text x="735" y="475" text-anchor="middle" class="label red">C1</text>
+    <text x="1065" y="475" text-anchor="middle" class="label blue">C2</text>
+    <text x="900" y="475" text-anchor="middle" class="label green">Relation</text>
+
+    <text x="605" y="190" text-anchor="middle" class="small red">Potential 1</text>
+    <text x="1195" y="190" text-anchor="middle" class="small blue">Potential 1</text>
+    <text x="900" y="225" text-anchor="middle" class="label green">Vesica Piscis</text>
+
+    <text x="900" y="610" text-anchor="middle" class="label blue">center distance = radius = first relation</text>
+    <text x="1065" y="160" text-anchor="middle" class="tiny blue">C1 circumference intersects C2</text>
+    <text x="735" y="835" text-anchor="middle" class="tiny red">C2 circumference intersects C1</text>
+  </g>
+
+  <g id="SYNC_LINES_TO_CENTER_POINTS">
+    <!-- Vertical dashed synchronization lines from circle centers down to the new position rows. -->
+    <line x1="735" y1="510" x2="735" y2="1185" class="sync-line"/>
+    <line x1="1065" y1="510" x2="1065" y2="1185" class="sync-line"/>
+    <line x1="900" y1="795.788" x2="900" y2="1185" class="dash-line" opacity="0.45"/>
+  </g>
+
+  <g id="POSITION_ROWS">
+    <!-- The horizontal rows below the Vesica structure use the same A-B-C-D-E x positions. -->
+    <!-- A=405, B=735, C=900, D=1065, E=1395. B and D synchronize with the two circle centers. -->
+
+    <text x="275" y="930" text-anchor="end" class="small">POSITIONS</text>
+    <line x1="405" y1="930" x2="1395" y2="930" class="row-line"/>
+    <circle cx="405" cy="930" r="9" class="point"/>
+    <circle cx="735" cy="930" r="9" class="point"/>
+    <circle cx="900" cy="930" r="9" class="point"/>
+    <circle cx="1065" cy="930" r="9" class="point"/>
+    <circle cx="1395" cy="930" r="9" class="point"/>
+    <text x="405" y="900" text-anchor="middle" class="row-label blue">A</text>
+    <text x="735" y="900" text-anchor="middle" class="row-label magenta">B</text>
+    <text x="900" y="900" text-anchor="middle" class="row-label blue">C</text>
+    <text x="1065" y="900" text-anchor="middle" class="row-label magenta">D</text>
+    <text x="1395" y="900" text-anchor="middle" class="row-label blue">E</text>
+
+    <text x="275" y="1015" text-anchor="end" class="small">FRACTION FORM</text>
+    <line x1="405" y1="1015" x2="1395" y2="1015" class="row-line"/>
+    <circle cx="405" cy="1015" r="9" class="point"/>
+    <circle cx="735" cy="1015" r="9" class="point"/>
+    <circle cx="900" cy="1015" r="9" class="point"/>
+    <circle cx="1065" cy="1015" r="9" class="point"/>
+    <circle cx="1395" cy="1015" r="9" class="point"/>
+    <text x="405" y="985" text-anchor="middle" class="row-label blue">A</text>
+    <text x="735" y="985" text-anchor="middle" class="row-label magenta">1/5</text>
+    <text x="900" y="985" text-anchor="middle" class="row-label blue">C</text>
+    <text x="1065" y="985" text-anchor="middle" class="row-label magenta">0.5</text>
+    <text x="1395" y="985" text-anchor="middle" class="row-label blue">E</text>
+
+    <text x="275" y="1100" text-anchor="end" class="small">PERCENTAGE FORM</text>
+    <line x1="405" y1="1100" x2="1395" y2="1100" class="row-line"/>
+    <circle cx="405" cy="1100" r="9" class="point"/>
+    <circle cx="735" cy="1100" r="9" class="point"/>
+    <circle cx="900" cy="1100" r="9" class="point"/>
+    <circle cx="1065" cy="1100" r="9" class="point"/>
+    <circle cx="1395" cy="1100" r="9" class="point"/>
+    <text x="405" y="1070" text-anchor="middle" class="row-label blue">A</text>
+    <text x="735" y="1070" text-anchor="middle" class="row-label magenta">75%</text>
+    <text x="900" y="1070" text-anchor="middle" class="row-label blue">C</text>
+    <text x="1065" y="1070" text-anchor="middle" class="row-label magenta">25%</text>
+    <text x="1395" y="1070" text-anchor="middle" class="row-label blue">E</text>
+  </g>
+
+  <g id="BOTTOM_CHAIN">
+    <rect x="410" y="1225" width="980" height="70" class="formula-box"/>
+    <text x="900" y="1271" text-anchor="middle" class="label">2 -&gt; 1.5 -&gt; 1 -&gt; 0.5  |  two potential states are reduced to a single relational state</text>
+  </g>
+</svg>
