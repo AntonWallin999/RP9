@@ -1,0 +1,396 @@
+{
+  "payload": {
+    "script": {
+      "name": "RP9_FIRST_DIFFERENTIATION_REVISED.py",
+      "version": "2.0.0",
+      "created_at_local": "2026-07-22 15:29:42",
+      "created_at_utc": "2026-07-22T15:29:42Z",
+      "python_version": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]",
+      "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+      "working_directory": "/mnt/data/K1_FIRST_DIFFERENTIATION_REVISED",
+      "output_directory": "/mnt/data/K1_FIRST_DIFFERENTIATION_REVISED/RP9_FIRST_DIFFERENTIATION_REVISED",
+      "purpose": "Complete verification of RP9 FIRST DIFFERENTIATION from single form to relational structure."
+    },
+    "layers": {
+      "A_meta_potential": {
+        "layer_name": "A_META_POTENTIAL",
+        "purpose": "Defines one spherical form before internal relational structure.",
+        "geometry": {
+          "form_count": 1,
+          "center_count": 1,
+          "center": {
+            "x": "0",
+            "y": "0",
+            "z": "0"
+          },
+          "radius": "1"
+        },
+        "classification": {
+          "form_status": "SINGLE_SPHERICAL_FORM",
+          "structural_status": "PRE_STRUCTURAL",
+          "rp9_interpretation": "META_POTENTIAL"
+        },
+        "status": "PASS"
+      },
+      "B_self_relation": {
+        "layer_name": "B_SELF_RELATION",
+        "purpose": "Reproduces the spherical reference as an equivalent self-relation.",
+        "form_transition": {
+          "before": 1,
+          "after": 2
+        },
+        "radius_relation": {
+          "R1": "1",
+          "R2": "1",
+          "equal_radii": true,
+          "new_scale_introduced": false
+        },
+        "status": "PASS"
+      },
+      "C_first_form_differentiation": {
+        "layer_name": "C_FIRST_FORM_DIFFERENTIATION",
+        "purpose": "Verifies the transition from one form to two equivalent forms.",
+        "forms": {
+          "sphere_1": {
+            "center": {
+              "x": "-1/2",
+              "y": "0",
+              "z": "0"
+            },
+            "radius": "1"
+          },
+          "sphere_2": {
+            "center": {
+              "x": "1/2",
+              "y": "0",
+              "z": "0"
+            },
+            "radius": "1"
+          },
+          "form_count_before": 1,
+          "form_count_after": 2,
+          "equal_form": true,
+          "distinct_centers": true
+        },
+        "classification": {
+          "difference_source": "POSITION",
+          "structure_required": false,
+          "differentiation": "FORM_DIFFERENTIATION_CONFIRMED"
+        },
+        "status": "PASS"
+      },
+      "D_half_half_positional_lock": {
+        "layer_name": "D_HALF_HALF_POSITIONAL_LOCK",
+        "purpose": "Verifies the symmetric half-half positional relation.",
+        "position": {
+          "R": "1",
+          "C1": {
+            "x": "-1/2",
+            "y": "0",
+            "z": "0"
+          },
+          "C2": {
+            "x": "1/2",
+            "y": "0",
+            "z": "0"
+          },
+          "midpoint": {
+            "x": "0",
+            "y": "0",
+            "z": "0"
+          },
+          "center_distance": "1"
+        },
+        "verification": {
+          "midpoint_is_origin": true,
+          "center_distance_equals_radius": true,
+          "half_half_position_valid": true
+        },
+        "status": "PASS"
+      },
+      "E_first_structural_intersection": {
+        "layer_name": "E_FIRST_STRUCTURAL_INTERSECTION",
+        "purpose": "Derives the first common intersection structure.",
+        "intersection": {
+          "exists": true,
+          "plane_center": {
+            "x": "0",
+            "y": "0",
+            "z": "0"
+          },
+          "plane_normal_axis": "x",
+          "radius_squared_exact": "3/4",
+          "radius_symbolic": "sqrt(3)/2 * R",
+          "radius_float": "8.66025403784438596588e-01",
+          "sphere_radius_float": "1.00000000000000000000e+00",
+          "intersection_radius_is_smaller": true
+        },
+        "classification": {
+          "rp9_name": "VESICA_PISCIS",
+          "structural_status": "FIRST_RELATIONAL_STRUCTURE",
+          "preceded_by_form_differentiation": true
+        },
+        "status": "PASS"
+      },
+      "F_exact_relational_result": {
+        "layer_name": "F_EXACT_RELATIONAL_RESULT",
+        "purpose": "Verifies the exact 3/4 and 1/4 relation.",
+        "exact_geometry": {
+          "intersection_radius_squared": "3/4",
+          "sphere_radius_squared": "1",
+          "ratio_exact": "3/4",
+          "complementary_lock_exact": "1/4"
+        },
+        "decimal_rendering": {
+          "ratio_20_places": "0.75000000000000000000",
+          "lock_20_places": "0.25000000000000000000"
+        },
+        "float_conversion": {
+          "ratio_float": 0.75,
+          "lock_float": 0.25,
+          "ratio_residual_against_exact": "0",
+          "lock_residual_against_exact": "0"
+        },
+        "status": "PASS"
+      },
+      "G_representation_control": {
+        "layer_name": "G_REPRESENTATION_CONTROL",
+        "purpose": "Separates binary float rendering from exact geometry.",
+        "float_geometry": {
+          "R": "1.00000000000000000000e+00",
+          "D": "1.00000000000000000000e+00",
+          "ri": "8.66025403784438596588e-01",
+          "AY": "3.14159265358979311600e+00",
+          "AI": "2.35619449019234439291e+00"
+        },
+        "float_lock": {
+          "ratio_observed": "7.49999999999999888978e-01",
+          "ratio_expected": "7.50000000000000000000e-01",
+          "ratio_residual": "-1.11022302462515654042e-16",
+          "ratio_hex": "0x1.7ffffffffffffp-1",
+          "lock_observed": "2.50000000000000111022e-01",
+          "lock_expected": "2.50000000000000000000e-01",
+          "lock_residual": "1.11022302462515654042e-16",
+          "lock_hex": "0x1.0000000000002p-2"
+        },
+        "machine_precision": {
+          "epsilon": "2.22044604925031308085e-16",
+          "nextafter_1_to_2": "1.00000000000000022204e+00",
+          "nextafter_diff": "2.22044604925031308085e-16",
+          "nextafter_matches_epsilon": true
+        },
+        "classification": {
+          "ratio_is_lower_than_0_75": true,
+          "lock_is_higher_than_0_25": true,
+          "symmetric_residual": true,
+          "exact_geometry_affected": false
+        },
+        "status": "PASS"
+      }
+    },
+    "master_conclusion": {
+      "layer_name": "H_MASTER_CONCLUSION",
+      "chain": [
+        "META-POTENTIAL",
+        "SINGLE SPHERICAL FORM",
+        "SELF-RELATION",
+        "TWO EQUIVALENT FORMS",
+        "FIRST FORM DIFFERENTIATION",
+        "HALF-HALF POSITION",
+        "INTERSECTION",
+        "VESICA PISCIS",
+        "FIRST RELATIONAL STRUCTURE",
+        "EXACT 3/4 RELATION",
+        "COMPLEMENTARY 1/4 LOCK",
+        "REPRESENTATION CONTROL"
+      ],
+      "summary": {
+        "A_meta_potential": "PASS",
+        "B_self_relation": "PASS",
+        "C_first_form_differentiation": "PASS",
+        "D_half_half_positional_lock": "PASS",
+        "E_first_structural_intersection": "PASS",
+        "F_exact_relational_result": "PASS",
+        "G_representation_control": "PASS"
+      },
+      "total_status": "PASS",
+      "measurement_boundary": "The code verifies geometric form count, center count, radius invariance, positional differentiation, half-half symmetry, intersection geometry, exact ratio and machine representation. RP9 interpretation remains explicitly separated.",
+      "rp9_interpretation_layer": {
+        "separated_from_measurement": true,
+        "interpretation": "FIRST DIFFERENTIATION is the transition from one spherical form to two equivalent spherical forms in distinct symmetric positions. Vesica Piscis is the first relational structure enabled by that prior differentiation."
+      }
+    }
+  },
+  "trace": [
+    {
+      "index": 1,
+      "timestamp_utc": "2026-07-22T15:29:42Z",
+      "layer": "A_META_POTENTIAL",
+      "operation": "define_single_spherical_form",
+      "formula": "P0 = Sphere(C0, R)",
+      "inputs": {},
+      "result": {
+        "sphere": {
+          "center": {
+            "x": "0",
+            "y": "0",
+            "z": "0"
+          },
+          "radius": "1"
+        },
+        "form_count": 1,
+        "center_count": 1
+      },
+      "status": "PASS",
+      "note": "Defines one spherical form as the pre-structural geometric reference."
+    },
+    {
+      "index": 2,
+      "timestamp_utc": "2026-07-22T15:29:42Z",
+      "layer": "B_SELF_RELATION",
+      "operation": "reproduce_equivalent_form",
+      "formula": "R1 = R2 = R",
+      "inputs": {
+        "R1": "1"
+      },
+      "result": {
+        "R2": "1",
+        "equal_radii": true,
+        "initial_form_count": 1,
+        "relational_form_count": 2
+      },
+      "status": "PASS",
+      "note": "Reproduces the same spherical form without introducing a new scale."
+    },
+    {
+      "index": 3,
+      "timestamp_utc": "2026-07-22T15:29:42Z",
+      "layer": "C_FIRST_FORM_DIFFERENTIATION",
+      "operation": "differentiate_form_by_position",
+      "formula": "1 equivalent form -> 2 equivalent forms with C1 != C2",
+      "inputs": {
+        "form_count_before": 1
+      },
+      "result": {
+        "form_count_after": 2,
+        "sphere_1": {
+          "center": {
+            "x": "-1/2",
+            "y": "0",
+            "z": "0"
+          },
+          "radius": "1"
+        },
+        "sphere_2": {
+          "center": {
+            "x": "1/2",
+            "y": "0",
+            "z": "0"
+          },
+          "radius": "1"
+        },
+        "equal_form": true,
+        "distinct_centers": true
+      },
+      "status": "PASS",
+      "note": "Isolates the first differentiation before intersection structure."
+    },
+    {
+      "index": 4,
+      "timestamp_utc": "2026-07-22T15:29:42Z",
+      "layer": "D_HALF_HALF_POSITIONAL_LOCK",
+      "operation": "verify_half_half_position",
+      "formula": "C1 = -R/2 ; C2 = +R/2 ; |C2-C1| = R",
+      "inputs": {
+        "R": "1"
+      },
+      "result": {
+        "C1": {
+          "x": "-1/2",
+          "y": "0",
+          "z": "0"
+        },
+        "C2": {
+          "x": "1/2",
+          "y": "0",
+          "z": "0"
+        },
+        "midpoint": {
+          "x": "0",
+          "y": "0",
+          "z": "0"
+        },
+        "center_distance": "1"
+      },
+      "status": "PASS",
+      "note": "Locks the two differentiated forms symmetrically around one midpoint."
+    },
+    {
+      "index": 5,
+      "timestamp_utc": "2026-07-22T15:29:42Z",
+      "layer": "E_FIRST_STRUCTURAL_INTERSECTION",
+      "operation": "derive_intersection_circle",
+      "formula": "ri^2 = R^2 - (D/2)^2",
+      "inputs": {
+        "R": "1",
+        "D": "1"
+      },
+      "result": {
+        "intersection_circle": {
+          "center": {
+            "x": "0",
+            "y": "0",
+            "z": "0"
+          },
+          "normal_axis": "x",
+          "radius_squared": "3/4",
+          "radius_symbolic": "sqrt(3)/2 * R"
+        },
+        "ri_squared": "3/4",
+        "ri_float": 0.8660254037844386,
+        "intersection_radius_smaller": true
+      },
+      "status": "PASS",
+      "note": "Derives the first common relational structure after form differentiation."
+    },
+    {
+      "index": 6,
+      "timestamp_utc": "2026-07-22T15:29:42Z",
+      "layer": "F_EXACT_RELATIONAL_RESULT",
+      "operation": "verify_exact_ratio_and_lock",
+      "formula": "ri^2/R^2 = 3/4 ; 1 - 3/4 = 1/4",
+      "inputs": {
+        "ri_squared": "3/4",
+        "R_squared": "1"
+      },
+      "result": {
+        "ratio_exact": "3/4",
+        "lock_exact": "1/4",
+        "ratio_float_residual": "0",
+        "lock_float_residual": "0"
+      },
+      "status": "PASS",
+      "note": "Verifies the exact relation after the full geometric derivation."
+    },
+    {
+      "index": 7,
+      "timestamp_utc": "2026-07-22T15:29:42Z",
+      "layer": "G_REPRESENTATION_CONTROL",
+      "operation": "verify_float_rendering",
+      "formula": "ratio=(pi*ri^2)/(pi*R^2) ; lock=1-ratio",
+      "inputs": {
+        "R": 1.0,
+        "D": 1.0
+      },
+      "result": {
+        "ratio": 0.7499999999999999,
+        "lock": 0.2500000000000001,
+        "ratio_residual": -1.1102230246251565e-16,
+        "lock_residual": 1.1102230246251565e-16,
+        "symmetric_residual": true
+      },
+      "status": "PASS",
+      "note": "Confirms representation behaviour separately from exact geometry."
+    }
+  ]
+}

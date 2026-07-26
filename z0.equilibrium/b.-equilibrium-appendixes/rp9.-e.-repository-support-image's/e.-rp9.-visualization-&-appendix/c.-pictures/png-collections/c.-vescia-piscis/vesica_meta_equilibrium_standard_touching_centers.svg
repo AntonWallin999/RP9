@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <style>
+      .bg { fill:#ffffff; }
+      .circle-left { fill:rgba(255,0,0,0.08); stroke:#cc0000; stroke-width:4; }
+      .circle-right { fill:rgba(0,80,255,0.08); stroke:#0044ff; stroke-width:4; }
+      .vesica { fill:rgba(120,0,180,0.14); stroke:#7a2cb8; stroke-width:3; }
+      .axis { stroke:#111111; stroke-width:3; }
+      .measure { stroke:#111111; stroke-width:2.5; marker-start:url(#arrow); marker-end:url(#arrow); }
+      .dash { stroke:#111111; stroke-width:2; stroke-dasharray:8 8; }
+      .thin { stroke:#555555; stroke-width:2; }
+      .center { fill:#111111; }
+      .red { fill:#cc0000; font-family:Arial,sans-serif; font-size:24px; font-weight:bold; }
+      .blue { fill:#0044ff; font-family:Arial,sans-serif; font-size:24px; font-weight:bold; }
+      .main { fill:#111111; font-family:Arial,sans-serif; font-size:26px; font-weight:bold; }
+      .small { fill:#111111; font-family:Arial,sans-serif; font-size:20px; }
+      .title { fill:#111111; font-family:Arial,sans-serif; font-size:38px; font-weight:bold; }
+      .formula { fill:#111111; font-family:Arial,sans-serif; font-size:28px; font-weight:bold; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1000"/>
+
+  <text x="800" y="70" text-anchor="middle" class="title">VESICA PISCIS - META-EQUILIBRIUM</text>
+
+  <!-- Standard Vesica Piscis geometry: center distance = radius. -->
+  <g id="VESICA_GEOMETRY">
+    <circle id="LEFT_POTENTIAL_CIRCLE" cx="650" cy="430" r="300" class="circle-left"/>
+    <circle id="RIGHT_POTENTIAL_CIRCLE" cx="950" cy="430" r="300" class="circle-right"/>
+
+    <!-- Vesica lens, drawn from exact circle intersections. -->
+    <path id="VESICA_LENS" class="vesica"
+          d="M 800.000 170.192
+             A 300 300 0 0 1 800.000 689.808
+             A 300 300 0 0 1 800.000 170.192 Z"/>
+
+    <!-- Centers and center-to-center relation. -->
+    <line x1="650" y1="430" x2="950" y2="430" class="axis"/>
+    <circle cx="650" cy="430" r="9" class="center"/>
+    <circle cx="950" cy="430" r="9" class="center"/>
+    <circle cx="800.0" cy="430" r="7" class="center"/>
+
+    <!-- Show each circumference hits the opposite center. -->
+    <line x1="650" y1="430" x2="950" y2="430" class="measure"/>
+    <text x="800.0" y="402" text-anchor="middle" class="main">centeravstand = radie</text>
+    <text x="632" y="472" text-anchor="end" class="red">C1</text>
+    <text x="968" y="472" text-anchor="start" class="blue">C2</text>
+
+    <text x="950" y="115" text-anchor="middle" class="blue">C1:s omkrets traffar C2</text>
+    <text x="650" y="775" text-anchor="middle" class="red">C2:s omkrets traffar C1</text>
+
+    <!-- Intersection axis. -->
+    <line x1="800.0" y1="170.1923788646684" x2="800.0" y2="689.8076211353316" class="dash"/>
+    <circle cx="800.0" cy="170.1923788646684" r="7" class="center"/>
+    <circle cx="800.0" cy="689.8076211353316" r="7" class="center"/>
+    <text x="820.0" y="155.1923788646684" class="small">ovre intersektion</text>
+    <text x="820.0" y="719.8076211353316" class="small">nedre intersektion</text>
+  </g>
+
+  <!-- Residual / relation panel. -->
+  <g id="META_EQUILIBRIUM_PANEL">
+    <rect x="150" y="800" width="1300" height="135" rx="18" fill="#f7f7f7" stroke="#111111" stroke-width="2"/>
+    <text x="800" y="845" text-anchor="middle" class="formula">2 -> 1.5 -> 1 -> 0.5</text>
+    <text x="800" y="885" text-anchor="middle" class="small">Potential = 2 | Relation = 1.5 | Balans = 1 | Differens = 0.5</text>
+    <text x="800" y="920" text-anchor="middle" class="small">Residualen 2 lases som fullstandig potentiell langd: 1 + 1</text>
+  </g>
+
+  <!-- Left side explanatory labels. -->
+  <g id="LEFT_TEXT">
+    <text x="120" y="185" class="main">1. Potential</text>
+    <text x="120" y="220" class="small">Tva lika cirklar</text>
+    <text x="120" y="250" class="small">1 + 1 = 2</text>
+
+    <text x="120" y="330" class="main">2. Relation</text>
+    <text x="120" y="365" class="small">Varje omkrets</text>
+    <text x="120" y="395" class="small">gar genom den andras center</text>
+
+    <text x="120" y="475" class="main">3. Vesica Piscis</text>
+    <text x="120" y="510" class="small">Overlappet ar forsta</text>
+    <text x="120" y="540" class="small">relationella formen</text>
+  </g>
+
+  <!-- Right side explanatory labels. -->
+  <g id="RIGHT_TEXT">
+    <text x="1220" y="185" class="main">META-EQUILIBRIUM</text>
+    <text x="1220" y="225" class="small">Inte maximal separation</text>
+    <text x="1220" y="255" class="small">Inte sammanslagning</text>
+    <text x="1220" y="285" class="small">Utan exakt relation</text>
+
+    <text x="1220" y="380" class="main">Differens</text>
+    <text x="1220" y="420" class="small">2 - 1.5 = 0.5</text>
+    <text x="1220" y="450" class="small">Skillnaden blir generator</text>
+    <text x="1220" y="480" class="small">for fortsatt struktur</text>
+  </g>
+</svg>

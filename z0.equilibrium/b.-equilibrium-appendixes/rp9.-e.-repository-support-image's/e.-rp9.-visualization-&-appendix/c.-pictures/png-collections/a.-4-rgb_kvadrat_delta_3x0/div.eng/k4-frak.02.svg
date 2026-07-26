@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1800" viewBox="0 0 1800 1800">
+
+  <title>RGB DUAL MASTER - RGB Triads On Outer Corners</title>
+
+  <defs>
+    <style>
+      .bg{fill:#ffffff;}
+      .outer{fill:none;stroke:#111111;stroke-width:5;}
+      .axis{stroke:#111111;stroke-width:2.5;fill:none;}
+      .axis_soft{stroke:#111111;stroke-width:1.8;fill:none;opacity:0.78;}
+      .module_line{stroke:#111111;stroke-width:1.6;fill:none;opacity:0.9;}
+      .module_dot{fill:#111111;}
+      .pos_label{font-family:Arial,sans-serif;font-size:24px;font-weight:700;fill:#111111;}
+      .dual_bd{font-family:Arial,sans-serif;font-size:18px;font-weight:700;fill:#b000b8;}
+      .dual_db{font-family:Arial,sans-serif;font-size:18px;font-weight:700;fill:#008aa8;}
+      .center_c{font-family:Arial,sans-serif;font-size:34px;font-weight:800;fill:#111111;}
+      .rgb_r{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#dd0000;}
+      .rgb_g{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#008800;}
+      .rgb_b{font-family:Arial,sans-serif;font-size:20px;font-weight:800;fill:#0044dd;}
+      .rgb_line{stroke:#111111;stroke-width:2;fill:none;}
+      .guide{stroke:#111111;stroke-width:1;fill:none;opacity:0.25;}
+    </style>
+
+    <g id="RGB_TRIAD">
+      <line x1="0" y1="-54" x2="-66" y2="54" class="rgb_line"/>
+      <line x1="0" y1="-54" x2="66" y2="54" class="rgb_line"/>
+      <line x1="-66" y1="54" x2="66" y2="54" class="rgb_line"/>
+      <text x="0" y="-70" text-anchor="middle" class="rgb_r">(R=1)</text>
+      <text x="-78" y="88" text-anchor="middle" class="rgb_g">(G=2)</text>
+      <text x="78" y="88" text-anchor="middle" class="rgb_b">(B=4)</text>
+    </g>
+
+    <g id="DUALITY_45">
+      <line x1="0" y1="-42" x2="-42" y2="0" class="module_line"/>
+      <line x1="0" y1="-42" x2="42" y2="0" class="module_line"/>
+      <line x1="42" y1="0" x2="0" y2="42" class="module_line"/>
+      <line x1="0" y1="42" x2="-42" y2="0" class="module_line"/>
+      <circle cx="0" cy="0" r="4.5" class="module_dot"/>
+      <text x="0" y="-55" text-anchor="middle" class="dual_bd">(B/D)</text>
+      <text x="-72" y="6" text-anchor="middle" class="dual_bd">(B/D)</text>
+      <text x="72" y="6" text-anchor="middle" class="dual_db">(D/B)</text>
+      <text x="0" y="70" text-anchor="middle" class="dual_db">(D/B)</text>
+    </g>
+
+    <g id="DUALITY_90">
+      <rect x="-50" y="-50" width="100" height="100" class="module_line"/>
+      <circle cx="-24" cy="-24" r="3.5" class="module_dot"/>
+      <circle cx="24" cy="-24" r="3.5" class="module_dot"/>
+      <circle cx="-24" cy="24" r="3.5" class="module_dot"/>
+      <circle cx="24" cy="24" r="3.5" class="module_dot"/>
+      <text x="-50" y="-63" text-anchor="middle" class="dual_bd">(B/D)</text>
+      <text x="50" y="-63" text-anchor="middle" class="dual_db">(D/B)</text>
+      <text x="-50" y="78" text-anchor="middle" class="dual_db">(D/B)</text>
+      <text x="50" y="78" text-anchor="middle" class="dual_bd">(B/D)</text>
+    </g>
+
+    <g id="CENTER_DUALITY">
+      <line x1="0" y1="-48" x2="-48" y2="0" class="module_line"/>
+      <line x1="0" y1="-48" x2="48" y2="0" class="module_line"/>
+      <line x1="48" y1="0" x2="0" y2="48" class="module_line"/>
+      <line x1="0" y1="48" x2="-48" y2="0" class="module_line"/>
+      <text x="0" y="-64" text-anchor="middle" class="dual_bd">(B/D)</text>
+      <text x="-82" y="7" text-anchor="middle" class="dual_bd">(B/D)</text>
+      <text x="82" y="7" text-anchor="middle" class="dual_db">(D/B)</text>
+      <text x="0" y="78" text-anchor="middle" class="dual_db">(D/B)</text>
+      <circle cx="0" cy="0" r="5" class="module_dot"/>
+      <text x="0" y="12" text-anchor="middle" class="center_c">C</text>
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="1800" class="bg"/>
+
+  <g id="01_OUTER_SQUARE">
+    <rect x="300" y="300" width="1200" height="1200" class="outer"/>
+  </g>
+
+  <g id="02_PRIMARY_LINES">
+    <line x1="300" y1="300" x2="1500" y2="1500" class="axis"/>
+    <line x1="1500" y1="300" x2="300" y2="1500" class="axis"/>
+    <line x1="300" y1="900" x2="1500" y2="900" class="axis"/>
+    <line x1="900" y1="300" x2="900" y2="1500" class="axis"/>
+  </g>
+
+  <g id="03_RGB_TRIADS_ON_OUTER_CORNERS">
+    <use href="#RGB_TRIAD" x="300" y="300"/>
+    <use href="#RGB_TRIAD" x="1500" y="300"/>
+    <use href="#RGB_TRIAD" x="300" y="1500"/>
+    <use href="#RGB_TRIAD" x="1500" y="1500"/>
+  </g>
+
+  <g id="04_HORIZONTAL_CHAIN_LABELS">
+    <text x="300" y="870" text-anchor="middle" class="pos_label">A/E</text>
+    <text x="600" y="870" text-anchor="middle" class="pos_label">B/D</text>
+    <text x="900" y="870" text-anchor="middle" class="pos_label">C</text>
+    <text x="1200" y="870" text-anchor="middle" class="pos_label">D/B</text>
+    <text x="1500" y="870" text-anchor="middle" class="pos_label">E/A</text>
+  </g>
+
+  <g id="05_VERTICAL_CHAIN_LABELS">
+    <text x="930" y="310" text-anchor="start" class="pos_label">A/E</text>
+    <text x="930" y="610" text-anchor="start" class="pos_label">B/D</text>
+    <text x="930" y="910" text-anchor="start" class="pos_label">C</text>
+    <text x="930" y="1210" text-anchor="start" class="pos_label">D/B</text>
+    <text x="930" y="1510" text-anchor="start" class="pos_label">E/A</text>
+  </g>
+
+  <g id="06_DIAGONAL_NW_SE_CHAIN_LABELS">
+    <text x="286" y="285" text-anchor="middle" class="pos_label">A/E</text>
+    <text x="575" y="575" text-anchor="middle" class="pos_label">B/D</text>
+    <text x="870" y="870" text-anchor="middle" class="pos_label">C</text>
+    <text x="1228" y="1228" text-anchor="middle" class="pos_label">D/B</text>
+    <text x="1515" y="1515" text-anchor="middle" class="pos_label">E/A</text>
+  </g>
+
+  <g id="07_DIAGONAL_NE_SW_CHAIN_LABELS">
+    <text x="1515" y="285" text-anchor="middle" class="pos_label">A/E</text>
+    <text x="1228" y="575" text-anchor="middle" class="pos_label">B/D</text>
+    <text x="930" y="870" text-anchor="middle" class="pos_label">C</text>
+    <text x="575" y="1228" text-anchor="middle" class="pos_label">D/B</text>
+    <text x="286" y="1515" text-anchor="middle" class="pos_label">E/A</text>
+  </g>
+
+  <g id="08_DUALITY_45_ON_HORIZONTAL_AXIS">
+    <use href="#DUALITY_45" x="600" y="900"/>
+    <use href="#DUALITY_45" x="1200" y="900"/>
+  </g>
+
+  <g id="09_DUALITY_45_ON_VERTICAL_AXIS">
+    <use href="#DUALITY_45" x="900" y="600"/>
+    <use href="#DUALITY_45" x="900" y="1200"/>
+  </g>
+
+  <g id="10_DUALITY_90_ON_DIAGONAL_NW_SE">
+    <use href="#DUALITY_90" x="600" y="600"/>
+    <use href="#DUALITY_90" x="1200" y="1200"/>
+  </g>
+
+  <g id="11_DUALITY_90_ON_DIAGONAL_NE_SW">
+    <use href="#DUALITY_90" x="1200" y="600"/>
+    <use href="#DUALITY_90" x="600" y="1200"/>
+  </g>
+
+  <g id="12_CENTER_C_DUALITY">
+    <use href="#CENTER_DUALITY" x="900" y="900"/>
+  </g>
+
+  <g id="13_ENDPOINT_MARKERS">
+    <circle cx="300" cy="900" r="4" class="module_dot"/>
+    <circle cx="1500" cy="900" r="4" class="module_dot"/>
+    <circle cx="900" cy="300" r="4" class="module_dot"/>
+    <circle cx="900" cy="1500" r="4" class="module_dot"/>
+    <circle cx="300" cy="300" r="4" class="module_dot"/>
+    <circle cx="1500" cy="300" r="4" class="module_dot"/>
+    <circle cx="300" cy="1500" r="4" class="module_dot"/>
+    <circle cx="1500" cy="1500" r="4" class="module_dot"/>
+  </g>
+
+</svg>

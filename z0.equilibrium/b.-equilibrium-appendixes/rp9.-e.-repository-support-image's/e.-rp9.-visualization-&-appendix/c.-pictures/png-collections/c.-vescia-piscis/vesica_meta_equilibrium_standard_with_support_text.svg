@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .circle-left { fill: rgba(255,0,0,0.06); stroke: #d00000; stroke-width: 5; }
+      .circle-right { fill: rgba(0,68,255,0.06); stroke: #0044ff; stroke-width: 5; }
+      .vesica { fill: rgba(0,170,0,0.16); stroke: #00aa00; stroke-width: 4; }
+      .main-line { stroke: #111111; stroke-width: 4; fill: none; }
+      .thin-line { stroke: #333333; stroke-width: 2; fill: none; }
+      .dash-line { stroke: #333333; stroke-width: 2; stroke-dasharray: 12 10; fill: none; }
+      .measure { stroke: #111111; stroke-width: 3; marker-start: url(#arrow); marker-end: url(#arrow); }
+      .measure-red { stroke: #d00000; stroke-width: 3; marker-start: url(#arrowRed); marker-end: url(#arrowRed); }
+      .measure-blue { stroke: #0044ff; stroke-width: 3; marker-start: url(#arrowBlue); marker-end: url(#arrowBlue); }
+      .measure-green { stroke: #008800; stroke-width: 3; marker-start: url(#arrowGreen); marker-end: url(#arrowGreen); }
+      .point { fill: #111111; }
+      .point-red { fill: #d00000; }
+      .point-blue { fill: #0044ff; }
+      .point-green { fill: #008800; }
+      .title { font-family: Arial, sans-serif; font-size: 44px; font-weight: 800; fill: #111111; letter-spacing: 1px; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 25px; font-weight: 700; fill: #333333; }
+      .label { font-family: Arial, sans-serif; font-size: 25px; font-weight: 700; fill: #111111; }
+      .small { font-family: Arial, sans-serif; font-size: 20px; font-weight: 600; fill: #222222; }
+      .tiny { font-family: Arial, sans-serif; font-size: 17px; font-weight: 600; fill: #333333; }
+      .red { fill: #d00000; }
+      .green { fill: #008800; }
+      .blue { fill: #0044ff; }
+      .box { fill: #f7f7f7; stroke: #111111; stroke-width: 2; rx: 18; }
+      .formula-box { fill: #ffffff; stroke: #111111; stroke-width: 3; rx: 18; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d00000"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0044ff"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#008800"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="1200"/>
+
+  <g id="TITLE">
+    <text x="900" y="85" text-anchor="middle" class="title">VESICA PISCIS - META-EQUILIBRIUM</text>
+    <text x="900" y="125" text-anchor="middle" class="subtitle">Potential 2 -&gt; Relation 1.5 -&gt; Balans 1 -&gt; Differens 0.5</text>
+  </g>
+
+  <g id="VESICA_GEOMETRY_STANDARD">
+    <!-- Standard Vesica Piscis: center distance equals radius. Each circumference hits the opposite center. -->
+    <circle id="LEFT_POTENTIAL_CIRCLE" cx="735" cy="510" r="330" class="circle-left"/>
+    <circle id="RIGHT_POTENTIAL_CIRCLE" cx="1065" cy="510" r="330" class="circle-right"/>
+    <path id="VESICA_LENS" class="vesica" d="M 900.000 224.212 A 330 330 0 0 1 900.000 795.788 A 330 330 0 0 1 900.000 224.212 Z"/>
+
+    <line x1="405" y1="510" x2="1395" y2="510" class="main-line"/>
+    <line x1="900.000" y1="224.212" x2="900.000" y2="795.788" class="dash-line"/>
+
+    <circle cx="735" cy="510" r="10" class="point-red"/>
+    <circle cx="1065" cy="510" r="10" class="point-blue"/>
+    <circle cx="900.000" cy="510" r="11" class="point-green"/>
+    <circle cx="900.000" cy="224.212" r="7" class="point"/>
+    <circle cx="900.000" cy="795.788" r="7" class="point"/>
+
+    <text x="735" y="475" text-anchor="middle" class="label red">C1</text>
+    <text x="1065" y="475" text-anchor="middle" class="label blue">C2</text>
+    <text x="900" y="475" text-anchor="middle" class="label green">Relation</text>
+
+    <text x="605" y="190" text-anchor="middle" class="small red">Potential 1</text>
+    <text x="1195" y="190" text-anchor="middle" class="small blue">Potential 1</text>
+    <text x="900" y="225" text-anchor="middle" class="label green">Vesica Piscis</text>
+
+    <line x1="735" y1="510" x2="1065" y2="510" class="measure-blue"/>
+    <text x="900" y="610" text-anchor="middle" class="label blue">centeravstand = radie = forsta relation</text>
+    <text x="1065" y="160" text-anchor="middle" class="tiny blue">C1:s omkrets traffar C2</text>
+    <text x="735" y="835" text-anchor="middle" class="tiny red">C2:s omkrets traffar C1</text>
+  </g>
+
+  <g id="MEASUREMENTS">
+    <line x1="405" y1="875" x2="1395" y2="875" class="measure"/>
+    <text x="900" y="850" text-anchor="middle" class="label">2 = full potentiell langd = 1 + 1</text>
+
+    <line x1="570" y1="925" x2="1230" y2="925" class="measure-green"/>
+    <text x="900" y="962" text-anchor="middle" class="label green">1.5 = relationell langd</text>
+
+    <line x1="1230" y1="1010" x2="1395" y2="1010" class="measure-red"/>
+    <text x="1312" y="1045" text-anchor="middle" class="label red">0.5</text>
+    <text x="1312" y="1072" text-anchor="middle" class="tiny">skillnad</text>
+  </g>
+
+  <g id="SEQUENCE_PANEL">
+    <rect x="80" y="225" width="300" height="570" class="box"/>
+    <text x="230" y="275" text-anchor="middle" class="label">Sekvens</text>
+    <text x="230" y="335" text-anchor="middle" class="small">1. Potential</text>
+    <text x="230" y="370" text-anchor="middle" class="small">2</text>
+    <text x="230" y="420" text-anchor="middle" class="small">v</text>
+    <text x="230" y="465" text-anchor="middle" class="small">2. Relation</text>
+    <text x="230" y="500" text-anchor="middle" class="small">1.5 / 2</text>
+    <text x="230" y="550" text-anchor="middle" class="small">v</text>
+    <text x="230" y="595" text-anchor="middle" class="small">3. Balans</text>
+    <text x="230" y="630" text-anchor="middle" class="small">1</text>
+    <text x="230" y="680" text-anchor="middle" class="small">v</text>
+    <text x="230" y="725" text-anchor="middle" class="small">4. Residual</text>
+    <text x="230" y="760" text-anchor="middle" class="small">0.5</text>
+  </g>
+
+  <g id="FORMULA_PANEL">
+    <rect x="1420" y="225" width="300" height="570" class="box"/>
+    <text x="1570" y="275" text-anchor="middle" class="label">Lasning</text>
+    <rect x="1460" y="315" width="220" height="88" class="formula-box"/>
+    <text x="1570" y="350" text-anchor="middle" class="small">2 - 1.5</text>
+    <text x="1570" y="382" text-anchor="middle" class="small">= 0.5</text>
+    <rect x="1460" y="435" width="220" height="88" class="formula-box"/>
+    <text x="1570" y="470" text-anchor="middle" class="small">2</text>
+    <text x="1570" y="502" text-anchor="middle" class="small">= 1 + 1</text>
+    <rect x="1460" y="555" width="220" height="88" class="formula-box"/>
+    <text x="1570" y="590" text-anchor="middle" class="small">1.5</text>
+    <text x="1570" y="622" text-anchor="middle" class="small">= relation</text>
+    <rect x="1460" y="675" width="220" height="88" class="formula-box"/>
+    <text x="1570" y="710" text-anchor="middle" class="small">0.5</text>
+    <text x="1570" y="742" text-anchor="middle" class="small">= differens</text>
+  </g>
+
+  <g id="BOTTOM_CHAIN">
+    <rect x="410" y="1085" width="980" height="70" class="formula-box"/>
+    <text x="900" y="1131" text-anchor="middle" class="label">2 -&gt; 1.5 -&gt; 1 -&gt; 0.5  |  tva potentiella tillstand reduceras till ett relationellt tillstand</text>
+  </g>
+</svg>

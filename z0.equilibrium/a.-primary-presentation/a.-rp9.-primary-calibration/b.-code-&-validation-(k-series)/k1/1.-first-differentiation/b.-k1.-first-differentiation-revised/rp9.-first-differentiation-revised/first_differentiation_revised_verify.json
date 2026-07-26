@@ -1,0 +1,32 @@
+{
+  "script_name": "RP9_FIRST_DIFFERENTIATION_REVISED.py",
+  "script_version": "2.0.0",
+  "generated_at_utc": "2026-07-22T15:29:42Z",
+  "files": {
+    "data_json": {
+      "path": "/mnt/data/K1_FIRST_DIFFERENTIATION_REVISED/RP9_FIRST_DIFFERENTIATION_REVISED/FIRST_DIFFERENTIATION_REVISED_DATA.json",
+      "bytes": 7310,
+      "sha256": "1cb005d971c7100aa70a43b9fc7d45c80e0488f3b6c5a7cee02c2d1af2088b38"
+    },
+    "trace_json": {
+      "path": "/mnt/data/K1_FIRST_DIFFERENTIATION_REVISED/RP9_FIRST_DIFFERENTIATION_REVISED/FIRST_DIFFERENTIATION_REVISED_TRACE.json",
+      "bytes": 4263,
+      "sha256": "0cd8339ee75432acd22b68299809354e0db94d79c41a2a4324f16f1c23e85565"
+    },
+    "full_datasheet_json": {
+      "path": "/mnt/data/K1_FIRST_DIFFERENTIATION_REVISED/RP9_FIRST_DIFFERENTIATION_REVISED/FIRST_DIFFERENTIATION_REVISED_FULL_DATASHEET.json",
+      "bytes": 12387,
+      "sha256": "7facaebfa436b3187e5973f6aa1824d9858edd48b9d18015f766c84774932984"
+    },
+    "presentation_markdown": {
+      "path": "/mnt/data/K1_FIRST_DIFFERENTIATION_REVISED/RP9_FIRST_DIFFERENTIATION_REVISED/FIRST_DIFFERENTIATION_REVISED_PRESENTATION.md",
+      "bytes": 1715,
+      "sha256": "3501ff984283235a31805f437fb8a4b73e77bf4344b627d4d37083ddce706eb7"
+    },
+    "control_log": {
+      "path": "/mnt/data/K1_FIRST_DIFFERENTIATION_REVISED/RP9_FIRST_DIFFERENTIATION_REVISED/FIRST_DIFFERENTIATION_REVISED_CONTROL_LOG.txt",
+      "bytes": 2512,
+      "sha256": "f4fd38a4217bad90c8bd7b96a07f3ea33a1b7afc9cac8d1fda1ef71d39a678b5"
+    }
+  }
+}
